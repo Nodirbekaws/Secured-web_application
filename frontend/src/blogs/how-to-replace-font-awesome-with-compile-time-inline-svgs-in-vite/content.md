@@ -50,3 +50,59 @@ When the font finally loads, the icons suddenly pop into place. This jump pushes
 
 ::: video ./font_icon_flicker_demo.mp4 "The page renders with missing icons before the font file loads and abruptly shifts the layout."
 :::
+
+## How inline SVGs fix the problem
+
+Inline SVGs fix all three problems. Instead of relying on character codes inside a separate font file, the browser renders the vector paths directly as part of the component template.
+
+Because the SVG code lives inside the JavaScript chunk, the icon is ready the moment the component mounts. There are no font files to download, no blank spaces, and no layout shifts.
+
+### The old problems with SVGs
+
+In the past, managing SVGs in a large project was tedious. You had to copy and paste raw `<svg>` markup directly into dozens of separate Vue components, or manually download individual files and run them through optimization tools like SVGO. It was repetitive, cluttered the codebase, and made simple updates feel like a chore.
+
+Because of this friction, many developers, including me, simply stuck with icon fonts. Even though icon fonts hurt performance and lacked flexibility, they were convenient enough to justify avoiding the hassle of manual SVG management.
+
+### Modern inline SVGs with unplugin-icons and Iconify
+
+Together, [unplugin-icons](https://github.com/unplugin/unplugin-icons?utm_source=gemini) and [Iconify](https://iconify.design/?utm_source=gemini) remove that friction entirely by turning SVGs into on-demand, compile-time components.
+
+Iconify packages open-source icon collections into standard npm datasets. Instead of downloading files manually, you install the exact icon set you need (such as `@iconify-json/fa7-solid`).
+
+Then, `unplugin-icons` lets you import any icon from those datasets directly as a standard Vue component:
+
+```vue
+<script setup>
+import IconCart from "~icons/fa7-solid/cart-shopping";
+</script>
+
+<template>
+  <button type="button">
+    <IconCart />
+    <span>Cart</span>
+  </button>
+</template>
+```
+
+At build time, the plugin replaces `<IconCart/>` with the actual inline SVG markup. You write clean component syntax, but the browser receives pure HTML without extra runtime overhead:
+
+```html
+<button type="button">
+  <svg data-v-f7246898="" viewBox="0 0 640 640" width="1em" height="1em" aria-hidden="true">
+    <path
+      fill="currentColor"
+      d="M24 48C10.7 48 0 58.7 0 72s10.7 24 24 24h45.3c3.9 0 7.2 2.8 7.9 6.6l52.1 286.3c6.2 34.2 36 59.1 70.8 59.1H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H200.1c-11.6 0-21.5-8.3-23.6-19.7l-5.1-28.3H475c30.8 0 57.2-21.9 62.9-52.2l31-165.9c3.7-19.7-11.4-37.9-31.5-37.9H124.7l-.4-2c-4.8-26.6-28-46-55.1-46zm184 528c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48"
+    ></path>
+  </svg>
+  <span>Cart</span>
+</button>
+```
+
+### How it works at build time
+
+When Vite builds your app, `unplugin-icons` intercepts any import starting with `~icons/`. It reads the SVG data directly from the local Iconify package and converts it into a Vue component.
+
+This approach gives you two advantages:
+
+- **Zero bundle bloat:** If your app uses 38 icons, Vite compiles and bundles only those 38 icons. The thousands of other icons in the package stay inside `node_modules` and never reach your production bundle.
+- **Seamless styling:** The compiled SVG uses `1em` dimensions and `currentColor`, meaning it automatically scales with your font size and inherits your text color. Your existing CSS classes continue to work without adjustments.
