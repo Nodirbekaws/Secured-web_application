@@ -106,3 +106,90 @@ This approach gives you two advantages:
 
 - **Zero bundle bloat:** If your app uses 38 icons, Vite compiles and bundles only those 38 icons. The thousands of other icons in the package stay inside `node_modules` and never reach your production bundle.
 - **Seamless styling:** The compiled SVG uses `1em` dimensions and `currentColor`, meaning it automatically scales with your font size and inherits your text color. Your existing CSS classes continue to work without adjustments.
+
+## How to set up unplugin-icons in Vite
+
+Migrating an existing project takes only a few minutes. You remove the old package, register the Vite plugin, delete the global CSS import, and replace your icon tags with components.
+
+### Install the dependencies
+
+First, remove `@fortawesome/fontawesome-free` and install `unplugin-icons` along with the Iconify datasets you need:
+
+```bash
+pnpm remove @fortawesome/fontawesome-free
+pnpm add -D unplugin-icons @iconify-json/fa7-solid @iconify-json/fa7-regular @iconify-json/fa7-brands
+```
+
+::: info
+If you use `npm` or `yarn`, replace `pnpm add -D` with `npm install -D` or `yarn add -D`.
+:::
+
+::: tip
+You are not limited to Font Awesome. Iconify supports dozens of open-source packs, including Lucide, Material Design, and Tabler Icons. You can browse available collections in the [Iconify Icon Sets directory](https://icon-sets.iconify.design/).
+
+::: image ./2_iconify_sets.png "Iconify icon sets directory showing popular collections"
+The Iconify directory lets you search and preview thousands of open-source icon sets.
+:::
+
+### Configure the Vite plugin
+
+Next, add `unplugin-icons` to your `vite.config.ts` (or `vite.config.js`). Set the compiler option to `vue3`:
+
+```ts
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import Icons from "unplugin-icons/vite";
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    Icons({
+      compiler: "vue3",
+      scale: 1,
+    }),
+  ],
+});
+```
+
+Setting `scale: 1` gives each generated `<svg>` a width and height of `1em`, allowing the icon to adapt naturally to your font size.
+
+If you use TypeScript, add the type declarations to `env.d.ts` so your editor recognizes the virtual `~icons/` imports:
+
+```ts
+/// <reference types="vite/client" />
+/// <reference types="unplugin-icons/types/vue" />
+```
+
+### Remove the global stylesheet
+
+Open your entry file (`main.ts` or `main.js`) and remove the Font Awesome CSS import:
+
+```ts
+// Delete this line:
+import "@fortawesome/fontawesome-free/css/all.min.css";
+```
+
+Removing this line completely eliminates that 110 kB render-blocking stylesheet.
+
+### Replace icons in your components
+
+Now you can replace your old `<i class="fa-solid fa-*"></i>` tags with explicit icon components:
+
+```vue
+<script setup lang="ts">
+import IconCart from "~icons/fa7-solid/cart-shopping";
+import IconHeart from "~icons/fa7-solid/heart";
+</script>
+
+<template>
+  <button type="button">
+    <IconCart />
+    <span>Cart</span>
+  </button>
+
+  <button type="button">
+    <IconHeart />
+    <span>Save</span>
+  </button>
+</template>
+```
