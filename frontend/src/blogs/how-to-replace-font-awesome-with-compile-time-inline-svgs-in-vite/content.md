@@ -20,6 +20,10 @@ To fix this, I migrated SetupRkhis from Font Awesome icon fonts to inline SVGs u
 
 In this guide, I will show you why icon fonts hurt performance and how to migrate your Vue 3 and Vite app to inline SVGs step by step.
 
+::: info Note
+The metrics shared in this guide were recorded while migrating SetupRkhis from Font Awesome to inline SVGs and serve as an indication of what is possible. While exact bundle sizes will vary depending on your app and how many icons you use, the overall performance gains and data savings will be very similar.
+:::
+
 ## Why icon fonts slow down your site
 
 Icon fonts work exactly like text fonts. Instead of letters like "A" or "B", the font file assigns an icon to a specific character code. While this made icons easy to style with CSS in the past, it creates three clear performance problems for modern web apps.
