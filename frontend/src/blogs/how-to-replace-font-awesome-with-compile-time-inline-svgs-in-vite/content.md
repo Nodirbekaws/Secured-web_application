@@ -48,7 +48,7 @@ Because fonts load over the network, there is always a short delay before the fi
 
 When the font finally loads, the icons suddenly pop into place. This jump pushes nearby text and buttons around, creating layout shifts that make the interface feel unstable, as shown below:
 
-::: video ./font_icon_flicker_demo.mp4 "The page renders with missing icons before the font file loads and abruptly shifts the layout."
+::: video ./1_font_icon_flicker_demo.mp4 "The page renders with missing icons before the font file loads and abruptly shifts the layout."
 :::
 
 ## How inline SVGs fix the problem
