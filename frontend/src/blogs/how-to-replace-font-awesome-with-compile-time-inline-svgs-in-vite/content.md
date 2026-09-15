@@ -65,7 +65,7 @@ Because of this friction, many developers, including me, simply stuck with icon 
 
 ### Modern inline SVGs with unplugin-icons and Iconify
 
-Together, [unplugin-icons](https://github.com/unplugin/unplugin-icons?utm_source=gemini) and [Iconify](https://iconify.design/?utm_source=gemini) remove that friction entirely by turning SVGs into on-demand, compile-time components.
+Together, [unplugin-icons](https://github.com/unplugin/unplugin-icons) and [Iconify](https://iconify.design/) remove that friction entirely by turning SVGs into on-demand, compile-time components.
 
 Iconify packages open-source icon collections into standard npm datasets. Instead of downloading files manually, you install the exact icon set you need (such as `@iconify-json/fa7-solid`).
 
