@@ -200,7 +200,7 @@ To measure the real impact of this migration, I compared the production build of
 
 | Asset layer                       | Before (Font Awesome) | After (unplugin-icons) | Difference  | Change     |
 | --------------------------------- | --------------------- | ---------------------- | ----------- | ---------- |
-| Binary webfonts (`.woff2`)        | 243.74                | 0.00                   | -243.74     | -100.0%    |
+| Binary webfonts (.woff2)          | 243.74                | 0.00                   | -243.74     | -100.0%    |
 | Production stylesheet (CSS, gzip) | 33.18                 | 6.58                   | -26.60      | -80.2%     |
 | Entry JavaScript (gzip)           | 17.17                 | 21.07                  | +3.90       | +22.7%     |
 | **Total transfer size (gzip)**    | **298.30**            | **31.96**              | **-266.34** | **-89.3%** |
