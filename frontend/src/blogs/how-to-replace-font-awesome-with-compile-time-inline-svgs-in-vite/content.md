@@ -212,3 +212,11 @@ All file sizes are measured in kilobytes (kB).
 Removing the `.woff2` file completely eliminated font requests during the initial page load, while deleting `all.min.css` saved 26.6 kB of compressed CSS and removed a render-blocking bottleneck. The only drawback was a slightly larger JavaScript bundle. Inlining the SVG paths for 38 icons added 3.9 kB of compressed code to the entry file.
 
 Trading a 3.9 kB increase in JavaScript for a 266 kB reduction in compressed assets is an easy decision. It speeds up initial page rendering and prevents icon-related layout shifts entirely.
+
+## Conclusion
+
+Icon fonts were once a convenient way to handle scalable icons, but they carry too much dead weight for modern web applications. Downloading thousands of unused icons just to render a handful of icons slows down the initial page load and creates layout instability.
+
+Compiling inline SVGs with `unplugin-icons` eliminates that friction. You keep the design convenience of large icon catalogs like Font Awesome, but ship only the exact vector paths your application uses.
+
+If your application still relies on a global icon font, audit your network tab. Replacing it with compile-time inline SVGs is one of the fastest ways to eliminate layout shifts and cut unnecessary kilobytes from your production build.
