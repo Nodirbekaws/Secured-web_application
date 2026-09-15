@@ -124,12 +124,13 @@ pnpm add -D unplugin-icons @iconify-json/fa7-solid @iconify-json/fa7-regular @ic
 If you use `npm` or `yarn`, replace `pnpm add -D` with `npm install -D` or `yarn add -D`.
 :::
 
-::: tip
+:::: tip
 You are not limited to Font Awesome. Iconify supports dozens of open-source packs, including Lucide, Material Design, and Tabler Icons. You can browse available collections in the [Iconify Icon Sets directory](https://icon-sets.iconify.design/).
 
 ::: image ./2_iconify_sets.png "Iconify icon sets directory showing popular collections"
 The Iconify directory lets you search and preview thousands of open-source icon sets.
 :::
+::::
 
 ### Configure the Vite plugin
 

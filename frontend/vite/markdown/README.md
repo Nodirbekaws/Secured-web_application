@@ -90,6 +90,22 @@ This is a helpful tip!
 > [!NOTE]
 > The full list of supported types is defined in [ADMONITION_TYPES](../../src/constants/content.js#L4). You can add new types by updating that list and creating a corresponding CSS class.
 
+### Nesting containers
+
+To nest custom containers inside one another (such as an image inside an admonition), use more colons (for example, four colons `::::`) for the outer container. This ensures the parser does not treat the inner container's closing fence as the end of the outer container.
+
+Syntax and example:
+
+```markdown
+:::: tip
+Content before the nested element.
+
+::: image ./example.png "Example alt text"
+Image caption goes here.
+:::
+::::
+```
+
 ### Superscript
 
 To write superscript text, surround the text with carets (`^`).
