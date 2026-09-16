@@ -109,14 +109,13 @@ This approach gives you two advantages:
 
 ## How to set up unplugin-icons in Vite
 
-Migrating an existing project takes only a few minutes. You remove the old package, register the Vite plugin, delete the global CSS import, and replace your icon tags with components.
+Migrating an existing project takes a few steps. You install the plugin and icon sets, register them in your Vite configuration, replace your icon tags with components, and remove the old font files and CSS imports.
 
 ### Install the dependencies
 
-First, remove `@fortawesome/fontawesome-free` and install `unplugin-icons` along with the Iconify datasets you need:
+First, install `unplugin-icons` along with the Iconify datasets you need:
 
 ```bash
-pnpm remove @fortawesome/fontawesome-free
 pnpm add -D unplugin-icons @iconify-json/fa7-solid @iconify-json/fa7-regular @iconify-json/fa7-brands
 ```
 
@@ -125,7 +124,7 @@ If you use `npm` or `yarn`, replace `pnpm add -D` with `npm install -D` or `yarn
 :::
 
 :::: tip
-You are not limited to Font Awesome. Iconify supports dozens of open-source packs, including Lucide, Material Design, and Tabler Icons. You can browse available collections in the [Iconify Icon Sets directory](https://icon-sets.iconify.design/).
+You are not limited to Font Awesome. Iconify supports dozens of open-source packs, including Lucide, Material Design, and Tabler Icons. You can browse available collections in the [Iconify icon sets directory](https://icon-sets.iconify.design/).
 
 ::: image ./2_iconify_sets.png "Iconify icon sets directory showing popular collections"
 The Iconify directory lets you search and preview thousands of open-source icon sets.
@@ -161,20 +160,9 @@ If you use TypeScript, add the type declarations to `env.d.ts` so your editor re
 /// <reference types="unplugin-icons/types/vue" />
 ```
 
-### Remove the global stylesheet
-
-Open your entry file (`main.ts` or `main.js`) and remove the Font Awesome CSS import:
-
-```ts
-// Delete this line:
-import "@fortawesome/fontawesome-free/css/all.min.css";
-```
-
-Removing this line completely eliminates that 110 kB render-blocking stylesheet.
-
 ### Replace icons in your components
 
-Now you can replace your old `<i class="fa-solid fa-*"></i>` tags with explicit icon components:
+Now you can replace your old `<i class="fa-solid fa-*"></i>` tags with icon components:
 
 ```vue
 <script setup lang="ts">
@@ -193,6 +181,25 @@ import IconHeart from "~icons/fa7-solid/heart";
     <span>Save</span>
   </button>
 </template>
+```
+
+### Remove the old package and stylesheet
+
+Once your components are using the new icon imports, clean up the old Font Awesome setup.
+
+Open your entry file (`main.ts` or `main.js`) and remove the global stylesheet import:
+
+```ts
+// Delete this line:
+import "@fortawesome/fontawesome-free/css/all.min.css";
+```
+
+Removing this line completely eliminates that 110 kB render-blocking stylesheet.
+
+Finally, uninstall the old package to keep your dependencies clean:
+
+```bash
+pnpm remove @fortawesome/fontawesome-free
 ```
 
 ## Measured performance impact
