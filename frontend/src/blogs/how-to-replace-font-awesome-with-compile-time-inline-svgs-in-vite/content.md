@@ -204,20 +204,18 @@ pnpm remove @fortawesome/fontawesome-free
 
 ## Measured performance impact
 
-To measure the real impact of this migration, I compared the production build of SetupRkhis before and after replacing Font Awesome.
+To measure the real impact of this migration, I compared the production build of SetupRkhis before and after replacing Font Awesome:
 
-| Asset layer                       | Before (Font Awesome) | After (unplugin-icons) | Difference  | Change     |
-| --------------------------------- | --------------------- | ---------------------- | ----------- | ---------- |
-| Binary webfonts (.woff2)          | 243.74                | 0.00                   | -243.74     | -100.0%    |
-| Production stylesheet (CSS, gzip) | 33.18                 | 6.58                   | -26.60      | -80.2%     |
-| Entry JavaScript (gzip)           | 17.17                 | 21.07                  | +3.90       | +22.7%     |
-| **Total transfer size (gzip)**    | **298.30**            | **31.96**              | **-266.34** | **-89.3%** |
+| Asset layer                       | Before (Font Awesome) (kB) | After (unplugin-icons) (kB) | Change     |
+| --------------------------------- | -------------------------- | --------------------------- | ---------- |
+| Binary webfonts (.woff2)          | 243.74                     | 0.00                        | -100.0%    |
+| Production stylesheet (CSS, gzip) | 33.18                      | 6.58                        | -80.2%     |
+| Entry JavaScript (gzip)           | 17.17                      | 21.07                       | +22.7%     |
+| **Total transfer size (gzip)**    | **298.30**                 | **31.96**                   | **-89.3%** |
 
-::: info Note
-All file sizes are measured in kilobytes (kB).
-:::
+Removing the `.woff2` file completely eliminated font requests during the initial page load, while deleting `all.min.css` saved 26.6 kB of compressed CSS and removed a render-blocking bottleneck.
 
-Removing the `.woff2` file completely eliminated font requests during the initial page load, while deleting `all.min.css` saved 26.6 kB of compressed CSS and removed a render-blocking bottleneck. The only drawback was a slightly larger JavaScript bundle. Inlining the SVG paths for 38 icons added 3.9 kB of compressed code to the entry file.
+The only trade-off was a slightly larger JavaScript bundle. Inlining the SVG paths for 38 icons added 3.9 kB of compressed code to the entry file.
 
 Trading a 3.9 kB increase in JavaScript for a 266 kB reduction in compressed assets is an easy decision. It speeds up initial page rendering and prevents icon-related layout shifts entirely.
 
