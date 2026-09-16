@@ -11,7 +11,7 @@ When starting a new web application, adding an icon library is one of the first 
 
 While building [SetupRkhis](https://setuprkhis.com/), a price comparison and deal tracker for tech products in Morocco, I did the same thing. At first, Font Awesome made adding icons easy. But when I checked the production build for performance, I noticed a problem in the network tab. The app was loading over 354 kB of icon files on the first page load:
 
-- A render-blocking global stylesheet (`all.min.css`) at 110.77 kB (33.18 kB gzip).
+- A global stylesheet (`all.min.css`) at 110.77 kB (33.18 kB gzip) that blocked the initial page render.
 - A webfont file (`fa-solid-900.woff2`) at 243.74 kB containing thousands of icons.
 
 The entire application only needed 38 icons. That means over 98% of the downloaded data was completely unused. On top of that, because the font loaded asynchronously, the page shifted and icons flickered while the browser waited for the `.woff2` file to download.
