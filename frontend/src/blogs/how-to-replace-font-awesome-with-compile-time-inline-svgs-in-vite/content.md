@@ -38,7 +38,7 @@ When you use Font Awesome, the font file includes thousands of icons. The browse
 
 ### Render-blocking stylesheets
 
-Before the browser can request the font file, it has to load the Font Awesome stylesheet (`all.min.css`).
+Before the browser can even request the font file, it has to load the Font Awesome stylesheet (`all.min.css`).
 
 Because stylesheets block rendering by default, the browser waits until the CSS file finishes downloading and parsing before displaying anything on screen. In SetupRkhis, this meant the browser had to process 110 kB of CSS rules on the first load, most of which defined icons the site never used.
 
@@ -55,21 +55,19 @@ When the font finally loads, the icons suddenly pop into place. This jump pushes
 
 ## How inline SVGs fix the problem
 
-Inline SVGs fix all three problems. Instead of relying on character codes inside a separate font file, the browser renders the vector paths directly as part of the component template.
+Inline SVGs solve all three issues directly. Instead of relying on character codes inside a separate font file, the browser renders vector paths directly from the component template.
 
-Because the SVG code lives inside the JavaScript chunk, the icon is ready the moment the component mounts. There are no font files to download, no blank spaces, and no layout shifts.
+Because the SVG markup lives inside your JavaScript chunk, the icon is ready the moment the component mounts. There are no font files to fetch, no blank spaces, and no layout shifts.
 
-### The old problems with SVGs
+Historically, managing raw SVGs in a large project was tedious. You had to copy raw `<svg>` markup into separate Vue components or manually run downloaded files through optimization tools like SVGO. Because of that friction, many developers, including me, stayed with icon fonts.
 
-In the past, managing SVGs in a large project was tedious. You had to copy and paste raw `<svg>` markup directly into dozens of separate Vue components, or manually download individual files and run them through optimization tools like SVGO. It was repetitive, cluttered the codebase, and made simple updates feel like a chore.
-
-Because of this friction, many developers, including me, simply stuck with icon fonts. Even though icon fonts hurt performance and lacked flexibility, they were convenient enough to justify avoiding the hassle of manual SVG management.
+Modern tooling eliminates this trade-off completely.
 
 ### Modern inline SVGs with unplugin-icons and Iconify
 
-Together, [unplugin-icons](https://github.com/unplugin/unplugin-icons) and [Iconify](https://iconify.design/) remove that friction entirely by turning SVGs into on-demand, compile-time components.
+Together, [unplugin-icons](https://github.com/unplugin/unplugin-icons) and [Iconify](https://iconify.design/) solve this by turning icons into Vue components during the build.
 
-Iconify packages open-source icon collections into standard npm datasets. Instead of downloading files manually, you install the exact icon set you need (such as `@iconify-json/fa7-solid`).
+Iconify packages open-source icon collections into standard npm datasets. Instead of downloading files manually, you install the exact icon set you need, such as `@iconify-json/fa7-solid` for Font Awesome 7 solid icons.
 
 Then, `unplugin-icons` lets you import any icon from those datasets directly as a standard Vue component:
 
@@ -86,7 +84,7 @@ import IconCart from "~icons/fa7-solid/cart-shopping";
 </template>
 ```
 
-At build time, the plugin replaces `<IconCart/>` with the actual inline SVG markup. You write clean component syntax, but the browser receives pure HTML without extra runtime overhead:
+At build time, the plugin replaces `<IconCart/>` with the raw `<svg>` element. You write clean component syntax, but the browser receives pure HTML without needing an icon runtime or extra JavaScript libraries to render them.
 
 ```html
 <button type="button">
@@ -107,7 +105,7 @@ When Vite builds your app, `unplugin-icons` intercepts any import starting with 
 This approach gives you two advantages:
 
 - **Zero bundle bloat:** If your app uses 38 icons, Vite compiles and bundles only those 38 icons. The thousands of other icons in the package stay inside `node_modules` and never reach your production bundle.
-- **Seamless styling:** The compiled SVG uses `1em` dimensions and `currentColor`, meaning it automatically scales with your font size and inherits your text color. Your existing CSS classes continue to work without adjustments.
+- **Automatic styling:** The compiled SVG uses `1em` dimensions and `currentColor`, meaning it automatically scales with your font size and inherits your text color. Your existing CSS classes continue to work without adjustments.
 
 ## How to set up unplugin-icons in Vite
 
