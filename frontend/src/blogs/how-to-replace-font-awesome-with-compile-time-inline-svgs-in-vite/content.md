@@ -1,7 +1,7 @@
 ---
 title: "How to replace Font Awesome with compile-time inline SVGs in Vite"
 subtitle: "Eliminate heavy icon fonts, prevent layout shifts, and bundle only the icons you need using unplugin-icons and Iconify."
-date: "September 13, 2026"
+date: "September 16, 2026"
 tags: ["Web performance", "Vite", "Vue", "Frontend", "Optimization"]
 ---
 
