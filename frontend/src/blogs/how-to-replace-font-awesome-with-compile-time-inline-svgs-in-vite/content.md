@@ -9,7 +9,7 @@ tags: ["Web performance", "Vite", "Vue", "Frontend", "Optimization"]
 
 When starting a new web application, adding an icon library is one of the first steps. For years, [Font Awesome](https://fontawesome.com/) was my default choice. It was intuitive, easy to get started with, and let me prototype interfaces without worrying about managing SVG files.
 
-While building [SetupRkhis](https://setuprkhis.com/), a price comparison and deal tracker for tech products in Morocco, I did the same thing. At first, Font Awesome made adding icons easy. But when I checked the production build for performance, I noticed a problem in the network tab. The app was loading over 354 kB of icon files on the first page load:
+While building [SetupRkhis](https://setuprkhis.com/), a price comparison and deal tracker for tech products in Morocco, I did the same thing. At first, Font Awesome made adding icons easy. But when I checked the production build in the network tab, the app was downloading over 354 kB of icon assets on the first load:
 
 - A global stylesheet (`all.min.css`) at 110.77 kB (33.18 kB gzip) that blocked the initial page render.
 - A webfont file (`fa-solid-900.woff2`) at 243.74 kB containing thousands of icons.
@@ -21,7 +21,9 @@ To fix this, I migrated SetupRkhis from Font Awesome icon fonts to inline SVGs u
 In this guide, I will show you why icon fonts hurt performance and how to migrate your Vue 3 and Vite app to inline SVGs step by step.
 
 ::: info Note
-The metrics shared in this guide were recorded while migrating SetupRkhis from Font Awesome to inline SVGs and serve as an indication of what is possible. While exact bundle sizes will vary depending on your app and how many icons you use, the overall performance gains and data savings will be very similar.
+The metrics shared in this guide were recorded while migrating SetupRkhis from Font Awesome to inline SVGs and serve as an indication of what is possible.
+
+While exact bundle sizes will vary depending on your app and how many icons you use, the overall performance gains and data savings will be very similar.
 :::
 
 ## Why icon fonts slow down your site
