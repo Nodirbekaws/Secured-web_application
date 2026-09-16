@@ -221,8 +221,10 @@ Trading a 3.9 kB increase in JavaScript for a 266 kB reduction in compressed ass
 
 ## Conclusion
 
-Icon fonts were once a convenient way to handle scalable icons, but they carry too much dead weight for modern web applications. Downloading thousands of unused icons just to render a handful of icons slows down the initial page load and creates layout instability.
+Icon fonts were once a convenient way to handle scalable icons, but they carry too much dead weight for modern web applications. Downloading thousands of unused icons just to display a handful of UI elements hurts initial load times and creates unnecessary layout shifts.
 
 Compiling inline SVGs with `unplugin-icons` eliminates that friction. You keep the design convenience of large icon catalogs like Font Awesome, but ship only the exact vector paths your application uses.
 
-If your application still relies on a global icon font, audit your network tab. Replacing it with compile-time inline SVGs is one of the fastest ways to eliminate layout shifts and cut unnecessary kilobytes from your production build.
+If your application still relies on a global icon font, take a look at your network tab. Replacing it with compile-time inline SVGs is one of the quickest ways to clean up your production bundle and make your interface feel snappy from the first paint.
+
+I hope this guide helps you optimize your icons and speed up your Vite builds.
