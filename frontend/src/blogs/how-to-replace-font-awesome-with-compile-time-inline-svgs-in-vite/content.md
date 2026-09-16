@@ -7,7 +7,7 @@ tags: ["Web performance", "Vite", "Vue", "Frontend", "Optimization"]
 
 ## Introduction
 
-When starting a new web application, adding an icon library is often one of the first steps. For years, [Font Awesome](https://fontawesome.com/) was my default choice. It was intuitive, easy to get started with, and let me prototype interfaces without worrying about individual SVG files.
+When starting a new web application, adding an icon library is one of the first steps. For years, [Font Awesome](https://fontawesome.com/) was my default choice. It was intuitive, easy to get started with, and let me prototype interfaces without worrying about individual SVG files.
 
 While building [SetupRkhis](https://setuprkhis.com/), a price comparison and hardware tracker for PC stores in Morocco, I did the same thing. At first, Font Awesome made adding icons easy. But when I checked the production build for performance, I noticed a problem in the network tab. The app was loading over 354 kB of icon files on the first page load:
 
