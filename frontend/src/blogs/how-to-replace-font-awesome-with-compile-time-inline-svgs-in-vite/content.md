@@ -34,7 +34,7 @@ Icon fonts work exactly like text fonts. Instead of letters like "A" or "B", the
 
 The main issue with an icon font is that it is an all-or-nothing package.
 
-When you use Font Awesome, the font file includes thousands of icons. The browser cannot download only the cart ::fa{fa-solid fa-cart-shopping}:: or search ::fa{fa-solid fa-magnifying-glass}:: icon from inside that file. It must fetch the entire `.woff2` file, which in this case was around 244 kB, even if your page only uses a handful of icons.
+When you use Font Awesome, the font file includes thousands of icons. The browser cannot download only the cart ::fa{fa-solid fa-cart-shopping}:: or search ::fa{fa-solid fa-magnifying-glass}:: icon from inside that file. It must fetch the entire `.woff2` file, which was around 244 kB in SetupRkhis, even though the application only needed 38 icons.
 
 ### Render-blocking stylesheets
 
