@@ -5,21 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node generate-sitemap.js && vite build && node generate-og-metadata.js",
-    "og:generate": "node generate-og-metadata.js",
-    "preview": "vite preview",
-    "lint": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui",
-    "test:e2e:report": "playwright show-report",
-    "test:e2e:headed": "playwright test --headed",
-    "sitemap": "node generate-sitemap.js"
+    "build": "node generate-sitemap.js && vite build && node generate-og-metadata.js"
   },
   "dependencies": {
     "@shikijs/transformers": "^3.22.0",
