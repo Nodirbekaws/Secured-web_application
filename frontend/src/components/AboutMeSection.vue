@@ -1,6 +1,6 @@
 <template>
   <section class="about-me-container">
-    <h2 class="about-me-title">About me</h2>
+    <h2 class="about-me-title">About me!</h2>
     <p class="about-me-paragraph">
       I'm Imad Saddik, a software developer from
       <a href="https://en.wikipedia.org/wiki/Morocco" target="_blank" rel="noopener noreferrer">Morocco</a>. I love
