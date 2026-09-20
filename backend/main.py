@@ -30,14 +30,14 @@ app.add_exception_handler(Exception, unhandled_exception_handler)
 
 app.middleware("http")(log_request_middleware)
 
-app.include_router(search.router, prefix="/api", tags=["search"])
-app.include_router(article.router, prefix="/api", tags=["article"])
-app.include_router(visitors.router, prefix="/api/visitors", tags=["visitors"])
+app.include_router(search.router, prefix="/", tags=["search"])
+app.include_router(article.router, prefix="/", tags=["article"])
+app.include_router(visitors.router, prefix="/visitors", tags=["visitors"])
 
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 
-@app.get("/api/health")
+@app.get("/health")
 async def health():
     return {"status": "ok"}
