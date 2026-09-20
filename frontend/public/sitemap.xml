@@ -8,211 +8,211 @@
 >
     <url>
         <loc>https://imadsaddik.com/</loc>
-        <lastmod>2026-09-16T20:52:58.863Z</lastmod>
+        <lastmod>2026-09-20T17:42:00.663Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/about-me</loc>
-        <lastmod>2026-09-16T20:52:58.863Z</lastmod>
+        <lastmod>2026-09-20T17:42:00.663Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/hire-me</loc>
-        <lastmod>2026-09-16T20:52:58.863Z</lastmod>
+        <lastmod>2026-09-20T17:42:00.663Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/resume</loc>
-        <lastmod>2026-09-16T20:52:58.863Z</lastmod>
+        <lastmod>2026-09-20T17:42:00.663Z</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/elasticsearch-change-heap-size</loc>
-        <lastmod>2026-02-26T06:48:56.016Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.566Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/elasticsearch-collapse-search-results</loc>
-        <lastmod>2026-02-26T06:48:56.016Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.568Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/elasticsearch-pre-filtering-with-knn-search</loc>
-        <lastmod>2026-05-19T08:02:09.926Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.570Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/fix-kernel-panic-linux</loc>
-        <lastmod>2026-05-19T08:02:09.926Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.577Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-check-battery-capacity-on-linux</loc>
-        <lastmod>2026-02-26T06:48:56.018Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.578Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-configure-firewall-ufw-fail2ban-ubuntu</loc>
-        <lastmod>2026-05-19T08:02:09.926Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.584Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-connect-a-custom-domain-and-secure-your-server-with-ssl</loc>
-        <lastmod>2026-05-19T08:02:09.932Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.596Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-eliminate-laptop-thermal-throttling-with-high-static-pressure</loc>
-        <lastmod>2026-06-13T20:15:09.500Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.646Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-enforce-code-quality-locally-using-pre-commit-hooks</loc>
-        <lastmod>2026-05-19T08:02:09.950Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.650Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-fix-soft-404-vulnerabilities-and-block-bots-in-nginx</loc>
-        <lastmod>2026-05-19T08:02:09.951Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.655Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-fix-sticky-hover-states-on-mobile-using-css-hover-media-queries</loc>
-        <lastmod>2026-08-29T14:26:57.458Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.661Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-manually-deploy-a-vuejs-and-fastapi-application</loc>
-        <lastmod>2026-05-19T08:02:09.953Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.666Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-optimize-global-performance-with-a-cdn-and-nginx-caching</loc>
-        <lastmod>2026-05-19T08:02:09.959Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.688Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-protect-your-home-server-from-power-outages-using-nut</loc>
-        <lastmod>2026-05-19T08:02:09.992Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.756Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-replace-font-awesome-with-compile-time-inline-svgs-in-vite</loc>
-        <lastmod>2026-09-16T20:51:45.658Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.761Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-self-host-and-securely-manage-meilisearch</loc>
-        <lastmod>2026-05-19T08:02:09.999Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.787Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-self-host-google-fonts-with-fontsource-to-improve-web-performance</loc>
-        <lastmod>2026-09-06T20:39:30.668Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.793Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-set-up-a-secure-cloud-server-with-ubuntu-and-ssh</loc>
-        <lastmod>2026-05-19T08:02:09.999Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.830Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-set-up-nginx-as-a-reverse-proxy-and-configure-security-headers</loc>
-        <lastmod>2026-05-19T08:02:10.020Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.887Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-verify-your-server-firewall-rules-using-nmap</loc>
-        <lastmod>2026-05-19T08:02:10.020Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.889Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/how-to-warp-and-angle-your-designs-in-inkscape</loc>
-        <lastmod>2026-05-19T08:02:10.020Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.900Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/inkscape-clean-up-document</loc>
-        <lastmod>2026-05-19T08:02:10.020Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.907Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/blogs/local-ai-stack-on-linux</loc>
-        <lastmod>2026-06-13T20:47:26.854Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.967Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/courses/benchmark-embedding-models</loc>
-        <lastmod>2026-02-26T06:48:56.019Z</lastmod>
+        <lastmod>2026-09-20T16:05:08.022Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/courses/elasticsearch-for-beginners</loc>
-        <lastmod>2026-02-26T06:48:56.019Z</lastmod>
+        <lastmod>2026-09-20T16:05:08.023Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/courses/evolution-of-the-transformer</loc>
-        <lastmod>2026-02-26T06:48:56.019Z</lastmod>
+        <lastmod>2026-09-20T16:05:08.026Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/courses/osrm-for-beginners</loc>
-        <lastmod>2026-02-26T06:48:56.019Z</lastmod>
+        <lastmod>2026-09-20T16:05:08.030Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/courses/train-your-own-language-model</loc>
-        <lastmod>2026-02-26T06:48:56.019Z</lastmod>
+        <lastmod>2026-09-20T16:05:08.032Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/astronomy/free-planetarium-apps</loc>
-        <lastmod>2026-05-19T08:02:09.926Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.417Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/astronomy/python-star-trails</loc>
-        <lastmod>2026-05-19T08:02:09.926Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.442Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://imadsaddik.com/astronomy/star-trails-with-smartphone</loc>
-        <lastmod>2026-05-19T08:02:09.926Z</lastmod>
+        <lastmod>2026-09-20T16:05:07.530Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
